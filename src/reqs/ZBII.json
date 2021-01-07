@@ -1,0 +1,173 @@
+{
+	"name": 		"Zwaardboot Tweemans",
+	"version": 		"?",
+	"requirements": [
+		{
+			"name": "Boot zeilklaar en nachtklaar maken",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Boot te water laten en verhalen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Hijsen en strijken van de zeilen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Stand en bediening van de zeilen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Sturen, roer en zwaarbediening",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Overstag gaan",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Opkruisen in breed vaarwater",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Opkruisen in nauw vaarwater",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Aanlopen van een bovenwinds gelegen punt",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Gijpen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Aankomen aan hogerwal/langswal",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Aankomen aan lagerwal",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Afvaren van hogerwal/langswal",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Afvaren van lagerwal",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Opvangen van windvlagen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Hangtechnieken en gewichtsverdeling",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Boot stilleggen en weer op gang brengen",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Omslaan en oprichten van de boot",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Gesleept worden",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Toepassing van de reglementen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Bijzondere vaartechnieken",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Het varen van een driehoeksbaan",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Het varen van een wedstrijd op een driehoeksbaan",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Boot opruimen voor een langere periode",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Aanvarings- en achtergrondpeiling maken",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Hangtechniek met de trapeze",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Varen met de (a)symmetrische spinnaker",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Samenwerking bemmaning",
+			"description": "todo",
+			"diploma": 2
+		}
+	]
+}

@@ -1,0 +1,167 @@
+{
+	"name": 		"Jeugdzeilen Tweemans",
+	"version": 		"?",
+	"requirements": [
+		{
+			"name": "Hijsen en Strijken van de zeilen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Boot zeilklaar en nachtklaar maken",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Boot te water laten en verhalen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Stand en bediening van de zeilen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Sturen, roer- en zwaardbediening",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Overstag gaan",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Opkruisen in breed vaarwater",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Opkruisen in nauw vaarwater",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Gijpen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Afvaren van hogerwal en langswal",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Afvaren van lagerwal",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Aankomen bij hoger wal en langswal",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Aankomen bij lagerwal",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Gesleept worden",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Veilig handelen bij windvlagen",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Bijzondere vaartechnieken",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Omslaan en oprichten van de boot",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "boot stilleggen en op gang brengen",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Hangtechniek en gewichtsverdeling",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Aanlopen bovenwinds punt",
+			"description": "todo",
+			"diploma": 2
+		},
+
+		{
+			"name": "Afmeren van de boot",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Zeilen aan- en afslaan",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Zeiltrim",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Puzzel- en/of toertocht volbrengen",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Kennismaken met wedstrijdzeilen",
+			"description": "todo",
+			"diploma": 3
+		},
+
+		{
+			"name": "Bemannen",
+			"description": "todo",
+			"diploma": 1
+		},
+
+		{
+			"name": "Man over boord",
+			"description": "todo",
+			"diploma": 3
+		}
+	]
+}

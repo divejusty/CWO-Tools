@@ -1,0 +1,23 @@
+// Colours //
+$colour-danger: red !default;
+$colour-dark: #050555 !default;
+$colour-light: #f9f9f9 !default;
+
+// General //
+$rounding: 5px !default;
+$padding: 10px !default;
+
+// Fonts //
+$font-size: 12px !default;
+$font-size-medium: 1.5*$font-size !default;
+$font-size-large: 2*$font-size !default;
+
+// Inputs & Buttons //
+$input-height: 35px !default;
+$input-padding: $padding !default;
+$input-rounding: $rounding !default;
+
+$button-height: $input-height !default;
+$button-width: $input-height !default;
+$button-padding: $padding !default;
+$button-rounding: $rounding !default;

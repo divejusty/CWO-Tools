@@ -1,0 +1,9 @@
+input, select {
+	padding: $input-padding;
+	height: $input-height;
+	border-radius: $input-rounding;
+}
+
+select {
+	width: 100%;
+}
