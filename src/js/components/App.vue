@@ -19,7 +19,7 @@
 		<Checklist :participants="participants" :requirement="selectedRequirement"></Checklist>
 
 		<div class="copyright no-print center">
-			Laatst bijgewerkt op 06/01/2021. Opmerkingen en/of problemen graag melden aan Justin.W.
+			Laatst bijgewerkt op 10/01/2021. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
 		</div>
 	</div>
 </template>

@@ -1,15 +1,18 @@
 {
-  "name": "cwo-utilities",
+  "name": "cwo-tools",
   "version": "1.0.0",
   "description": "Some helpful apps for sailing instruction.",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/divejusty/CWO-Tools"
+  },
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mix",
     "watch": "mix watch",
     "hot": "mix watch --hot",
     "production": "mix --production",
-    "serve": "php -S localhost:8765"
+    "serve": "cd dist && php -S localhost:8765"
   },
   "author": "Justin Wies",
   "license": "MIT",

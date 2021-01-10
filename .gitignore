@@ -1,8 +1,5 @@
 /node_modules/
-
-/assets/
-/images/
-mix-manifest.json
+/dist/
 
 *.psd
 npm-debug.log.*
