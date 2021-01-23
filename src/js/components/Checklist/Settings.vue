@@ -36,11 +36,24 @@
 export default {
 	components: {
 	},
-	props: [
-		'participants',
-		'requirements',
-		'discipline',
-	],
+	props: {
+		participants: {
+			type: Array,
+			default: () => {
+				return []
+			},
+		},
+		requirements: {
+			type: Array,
+			default: () => {
+				return []
+			},
+		},
+		discipline: {
+			type: String,
+			default: '',
+		},
+	},
 	data () { return {
 		newName: '',
 		newLevel: 1,

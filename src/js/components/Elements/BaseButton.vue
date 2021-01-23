@@ -22,8 +22,8 @@ export default {
 
 		&.delete {
 			float: right;
-			color: $colour-danger;
-			border-color: $colour-danger;
+			background-color: $colour-danger;
+			border-color: darken($colour-danger, 10);
 		}
 
 		&.text {

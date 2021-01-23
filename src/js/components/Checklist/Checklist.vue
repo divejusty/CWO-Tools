@@ -24,10 +24,20 @@
 
 <script>
 export default {
-	props: [
-		'requirement',
-		'participants',
-	],
+	props: {
+		requirement: {
+			type: Object,
+			default: () => {
+				return {}
+			},
+		},
+		participants: {
+			type: Array,
+			default: () => {
+				return []
+			},
+		},
+	},
 	computed: {
 		maxLevel() {
 			return this.participants.reduce((accumulator, participant) => {
@@ -39,12 +49,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.table {
+.table {
 	border-collapse: collapse;
 	font-size: $font-size;
 
 	td {
-		border: 1px solid black;
+		border: 1px solid $colour-border;
 		padding: 5px 8px;
 		min-width: 70px;
 
@@ -52,17 +62,41 @@ export default {
 	}
 
 	&__label {
-		background-color: #c9c9c9;
+		color: $colour-foreground;
+		background: $colour-box;
 		text-transform: capitalize;
 	}
 
 	&__cell {
 		&--req {
-			background: white;
+			background: $colour-foreground;
 		}
 
 		&--noreq {
 			background-image: url("../../../images/unavailable.gif");
+		}
+	}
+}
+
+@media print {
+	.table {
+		td {
+			border-color: $colour-border-print;
+		}
+
+		&__label {
+			color: $colour-foreground-print;
+			background: $colour-box-print;
+		}
+
+		&__cell {
+			&--req {
+				background: $colour-background-print;
+			}
+
+			&--noreq {
+				background-image: url("../../../images/unavailable.gif");
+			}
 		}
 	}
 }

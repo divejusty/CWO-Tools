@@ -19,7 +19,7 @@
 		<Checklist :participants="participants" :requirement="selectedRequirement"></Checklist>
 
 		<div class="copyright no-print center">
-			Laatst bijgewerkt op 10/01/2021. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
+			Laatst bijgewerkt op 24/01/2021. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
 		</div>
 	</div>
 </template>
@@ -138,12 +138,12 @@ export default {
 }
 
 .config, .checklist, .info, .options {
-	padding: 10px;
-	overflow-x: scroll;
+	padding: $padding;
+	box-sizing: border-box;
 }
 
 .config, .info, .options {
-	border-right: 1px solid $colour-dark;
+	border-right: 1px solid $colour-foreground;
 }
 
 .config { grid-area: config; }
@@ -152,9 +152,9 @@ export default {
 .info { grid-area: info; }
 
 .copyright {
-	border-top: 1px solid $colour-dark;
+	border-top: 1px solid $colour-foreground;
 	grid-area: copyright;
-	padding: 5px;
+	padding: $padding;
 }
 
 @media print {
