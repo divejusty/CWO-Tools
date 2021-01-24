@@ -21,6 +21,11 @@ class Utils
 	 */
 	public static function mix(string $filename): string
 	{
+		// Check if the filename starts with a /, if not, add it.
+		if(substr($filename, 0, 1) !== '/') {
+			$filename = '/' . $filename;
+		} 
+
 		// Check if we already have a stored version of the filename in our storage, if so, return it.
 		if(count(static::$mixFiles) > 0 && isset(static::$mixFiles[$filename])) {
 			return static::$mixFiles[$filename];
@@ -37,6 +42,19 @@ class Utils
 
 		// If all else fails, return the filename
 		return $filename;
+	}
+
+	/**
+	 * echos the given data as a JSON encoded response.
+	 * 
+	 * @param mixed $data The response to be echoed
+	 * @return void
+	 */
+	public static function response($data): void
+	{
+		header('Content-Type: application/json');
+
+		echo json_encode($data);
 	}
 
 }

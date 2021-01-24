@@ -4,6 +4,7 @@ $colour-foreground: #D9DBF1 !default;
 $colour-background: #04151F !default;
 $colour-box: lighten($colour-background, 10) !default;
 $colour-border: darken($colour-box, 20) !default;
+$colour-details: #05b2dc !default;
 
 $colour-danger-print: #8b2635 !default;
 $colour-foreground-print: black !default;
@@ -16,6 +17,10 @@ $colour-border-print: black !default;
 // General //
 $rounding: 5px !default;
 $padding: 12px !default;
+
+// Links //
+$link-colour: $colour-details !default;
+$link-colour-hover: lighten($link-colour, 10) !default;
 
 // Fonts //
 $font-size: 14px !default;
@@ -31,3 +36,6 @@ $button-height: $input-height !default;
 $button-width: $input-height !default;
 $button-padding: $input-padding !default;
 $button-rounding: $rounding !default;
+
+// Grid //
+$grid-copyright-height: $font-size + 2*$padding !default;

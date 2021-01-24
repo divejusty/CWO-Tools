@@ -1,5 +1,5 @@
 <template>
-	<button @click="$emit('click')">
+	<button @click="click">
 		<slot></slot>
 	</button>
 </template>
@@ -7,6 +7,12 @@
 <script>
 export default {
 	name: 'BaseButton',
+	methods: {
+		click(event) {
+			this.$emit('click', event)
+			event.target.blur()
+		}
+	},
 }
 </script>
 
@@ -19,6 +25,10 @@ export default {
 		height: $button-height;
 		font-weight: bold;
 		cursor: pointer;
+
+		&:disabled {
+			cursor: not-allowed;
+		}
 
 		&.delete {
 			float: right;

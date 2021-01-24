@@ -2,8 +2,7 @@
 	<div class="app">
 		<Settings :participants=participants :requirements=requirements :discipline=discipline
 		@change="discipline = $event"
-		@delete-participant="deleteParticipant">
-		</Settings>
+		@delete-participant="deleteParticipant" />
 
 		<div class="info no-print">
 			<Subheading>Uitleg</Subheading>
@@ -14,9 +13,9 @@
 			</ol>
 		</div>
 
-		<Options @do-reset="doReset()" @do-print="doPrint()"></Options>
+		<Options @do-reset="doReset()" @do-print="doPrint()" />
 
-		<Checklist :participants="participants" :requirement="selectedRequirement"></Checklist>
+		<Checklist :participants="participants" :requirement="selectedRequirement" />
 
 		<div class="copyright no-print center">
 			Laatst bijgewerkt op 24/01/2021. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
@@ -121,7 +120,7 @@ export default {
 		"options checklist"
 		"copyright copyright";
 	grid-template-columns: 300px 1fr;
-	grid-template-rows: 2fr 1fr 1fr 30px;
+	grid-template-rows: 2fr 1fr 1fr $grid-copyright-height;
 }
 
 @media screen and (max-width: 750px) {
@@ -133,7 +132,7 @@ export default {
 			"checklist"
 			"copyright";
 		grid-template-columns: auto;
-		grid-template-rows: auto auto auto auto 30px; 
+		grid-template-rows: auto auto auto auto $grid-copyright-height; 
 	}
 }
 

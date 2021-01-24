@@ -11,5 +11,5 @@ Some ideas I would like to look at in the future, kind of split based on what ki
 * Lesson planner
 
 ## Minor developments
-* Split vendor stuff in Mix
 * Create endpoint for Requirements files, allowing for versioning using Mix
+* Figure out something to automatically set last update date

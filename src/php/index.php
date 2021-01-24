@@ -12,6 +12,8 @@ include_once('Utils.php');
 
 	<body>
 		<div id="app"></div>
+		<script src="<?php echo Utils::mix('assets/manifest.js') ?>"></script>
+		<script src="<?php echo Utils::mix('assets/vendor.js') ?>"></script>
 		<script src="<?php echo Utils::mix('assets/app.js') ?>"></script>
 	</body>
 </html>

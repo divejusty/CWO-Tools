@@ -1,10 +1,14 @@
 <?php
+/**
+ * Simple reflexive utility for echoing stored json files as json data.
+ */
 
-header('Content-Type: application/json');
+require_once('Utils.php');
 
 $out = [];
 foreach (glob('assets/reqs/*.json') as $filename) {
     $p = pathinfo($filename);
     $out[] = $p['filename'];
 }
-echo json_encode($out); ?>
+
+Utils::response($out);

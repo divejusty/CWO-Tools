@@ -28,7 +28,7 @@
 
 		<input type="text" name="new-name" placeholder="naam" v-model="newName" @keyup.enter="addParticipant">
 		<input type="number" name="new-level" placeholder="cwo" min="1" max="4" v-model="newLevel">
-		<BaseButton @click.native="addParticipant">+</BaseButton>
+		<BaseButton @click.native="addParticipant" :disabled="!submittable">+</BaseButton>
 	</div>
 </template>
 
@@ -58,9 +58,14 @@ export default {
 		newName: '',
 		newLevel: 1,
 	}},
+	computed: {
+		submittable() {
+			return this.newName.length > 0 && this.newLevel >= 1 && this.newLevel <= 4 
+		},
+	},
 	methods: {
 		addParticipant() {
-			if(this.newName.length == 0) {
+			if(!this.submittable) {
 				return
 			}
 
