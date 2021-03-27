@@ -1,5 +1,7 @@
 <template>
-	<button @click="click">
+	<button @click="click"
+			class="rounded-md dark:bg-gray-100 bg-gray-800 dark:text-gray-800 text-gray-100 p-1.5 h-10 cursor-pointer font-bold"
+			:class="(isText ? '' : 'W-10')">
 		<slot></slot>
 	</button>
 </template>
@@ -13,19 +15,18 @@ export default {
 			event.target.blur()
 		}
 	},
+	props: {
+		isText: {
+			type: Boolean,
+			required: false,
+			default: false,
+		}
+	},
 }
 </script>
 
 <style lang="scss" scoped>
 	button {
-		padding: $button-padding;
-		border-radius: $button-rounding;
-
-		width: $button-width;
-		height: $button-height;
-		font-weight: bold;
-		cursor: pointer;
-
 		&:disabled {
 			cursor: not-allowed;
 		}
@@ -34,10 +35,6 @@ export default {
 			float: right;
 			background-color: $colour-danger;
 			border-color: darken($colour-danger, 10);
-		}
-
-		&.text {
-			width: auto;
 		}
 	}
 </style>

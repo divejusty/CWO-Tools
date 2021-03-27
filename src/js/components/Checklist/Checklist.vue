@@ -1,5 +1,5 @@
 <template>
-	<div class="checklist">
+	<div class="checklist overflow-y-scroll overflow-x-hidden">
 		<Heading class="checklist__title no-print">Checklist</Heading>
 		<table class="table">
 			<thead>

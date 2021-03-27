@@ -10,8 +10,8 @@ import Vue from 'vue'
 const requireComponent = require.context(
   // Look for files in the current directory
   '.',
-  // Do not look in subdirectories
-  false,
+  // Do look in subdirectories
+  true,
   // Only include .vue files
   /[\w-]+\.vue$/
 )
@@ -25,13 +25,17 @@ requireComponent.keys().forEach((fileName) => {
     // Remove the "./" from the beginning
     .replace(/^\.\//, '')
     // Remove the file extension from the end
-    .replace(/\.\w+$/, '')
+	.replace(/\.\w+$/, '')
+	// Split on /
+	.split('/')
+	// Take the last item
+	.reduce((val, cur) => cur)
     // Split up kebabs
     .split('-')
     // Upper case
     .map((kebab) => kebab.charAt(0).toUpperCase() + kebab.slice(1))
     // Concatenated
-    .join('')
+	.join('')
 
   // Globally register the component
   Vue.component(componentName, componentConfig.default || componentConfig)

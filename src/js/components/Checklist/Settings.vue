@@ -19,23 +19,21 @@
 					{{ participant.level }}
 				</div>
 				<div class="participant__actions">
-					<BaseButton class="delete" @click.native="$emit('delete-participant', participant.uuid)">
+					<IconButton class="delete" @click.native="$emit('delete-participant', participant.uuid)">
 						x
-					</BaseButton>
+					</IconButton>
 				</div>
 			</div>
 		</div>
 
 		<input type="text" name="new-name" placeholder="naam" v-model="newName" @keyup.enter="addParticipant">
 		<input type="number" name="new-level" placeholder="cwo" min="1" max="4" v-model="newLevel">
-		<BaseButton @click.native="addParticipant" :disabled="!submittable">+</BaseButton>
+		<IconButton @click.native="addParticipant" :disabled="!submittable">+</IconButton>
 	</div>
 </template>
 
 <script>
 export default {
-	components: {
-	},
 	props: {
 		participants: {
 			type: Array,
