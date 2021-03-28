@@ -1,5 +1,5 @@
 <template>
-	<h1>
+	<h1 class="m-1.5 mb-2.5 text-center capitalize text-2xl">
 		<slot></slot>
 	</h1>
 </template>
@@ -9,13 +9,3 @@ export default {
 	name: 'Heading',
 	}
 </script>
-
-<style lang="scss" scoped>
-	h1 {
-		text-transform: capitalize;
-		text-align: center;
-		margin: 5px;
-		margin-bottom: 10px;
-		font-size: $font-size-large;
-	}
-</style>

@@ -45,7 +45,7 @@ class Utils
 	}
 
 	/**
-	 * echos the given data as a JSON encoded response.
+	 * Echos the given data as a JSON encoded response.
 	 * 
 	 * @param mixed $data The response to be echoed
 	 * @return void
@@ -55,6 +55,23 @@ class Utils
 		header('Content-Type: application/json');
 
 		echo json_encode($data);
+	}
+
+	/**
+	 * Returns the time when the app was last updated as a Unix Timestamp.
+	 * @return int
+	 */
+	public static function updatedAt(): int
+	{
+		// Use the manifest for determining the date, as that will almost always be updated when something changes.
+		$file = 'mix-manifest.json';
+
+		if (file_exists($file)) {
+			$updateDate = filemtime($file);
+		}
+
+		// Return the update timestamp (or the current timestamp if the manifest file can't be found);
+		return $updateDate ?? time();
 	}
 
 }

@@ -10,7 +10,7 @@ include_once('Utils.php');
 		<link href="<?php echo Utils::mix('assets/app.css') ?>" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
-			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			// On page load or when changing themes, added inline in `head` to avoid FOUC
 			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 				document.documentElement.classList.add('dark')
 				localStorage.theme = 'dark'
@@ -18,10 +18,13 @@ include_once('Utils.php');
 				document.documentElement.classList.remove('dark')
 				localStorage.theme = 'light'
 			}
-</script>
+
+			// Bind the version data to the window instance
+			window.appVersionDate = <?php echo Utils::updatedAt(); ?>
+		</script>
 	</head>
 
-	<body>
+	<body class="text-sm dark:text-gray-100 text-gray-900 dark:bg-gray-900 bg-gray-50">
 		<div id="app"></div>
 		<script src="<?php echo Utils::mix('assets/manifest.js') ?>"></script>
 		<script src="<?php echo Utils::mix('assets/vendor.js') ?>"></script>

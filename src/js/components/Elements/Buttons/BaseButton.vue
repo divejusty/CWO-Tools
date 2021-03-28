@@ -1,7 +1,7 @@
 <template>
 	<button @click="click"
-			class="rounded-md dark:bg-gray-100 bg-gray-800 dark:text-gray-800 text-gray-100 p-1.5 h-10 cursor-pointer font-bold"
-			:class="(isText ? '' : 'W-10')">
+			class="rounded-md bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-1.5 h-8 cursor-pointer font-bold disabled:cursor-not-allowed m-1 border"
+			:class="classes">
 		<slot></slot>
 	</button>
 </template>
@@ -15,26 +15,33 @@ export default {
 			event.target.blur()
 		}
 	},
+	computed: {
+		classes() {
+			let classList = ''
+
+			if(!this.isText) {
+				classList += 'w-8 '
+			}
+
+			if(this.danger) {
+				classList += 'dark:text-red-500 text-red-900 '
+				classList += 'dark:border-red-500 border-red-900 '
+			}
+
+			return classList
+		},
+	},
 	props: {
 		isText: {
 			type: Boolean,
-			required: false,
+			required: true,
 			default: false,
-		}
+		},
+		danger: {
+			type: Boolean,
+			required: true,
+			default: false,
+		},
 	},
 }
 </script>
-
-<style lang="scss" scoped>
-	button {
-		&:disabled {
-			cursor: not-allowed;
-		}
-
-		&.delete {
-			float: right;
-			background-color: $colour-danger;
-			border-color: darken($colour-danger, 10);
-		}
-	}
-</style>

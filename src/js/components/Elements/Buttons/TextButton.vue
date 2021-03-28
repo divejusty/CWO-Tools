@@ -1,5 +1,5 @@
 <template>
-	<base-button @click="click" :isText="true">
+	<base-button @click="click" :isText="isText" :danger="danger">
 		<slot></slot>
 	</base-button>
 </template>
@@ -14,6 +14,18 @@ export default {
 			this.$emit('click', event)
 			event.target.blur()
 		}
+	},
+	props: {
+		isText: {
+			type: Boolean,
+			required: false,
+			default: true,
+		},
+		danger: {
+			type: Boolean,
+			required: false,
+			default: false,
+		},
 	},
 }
 </script>

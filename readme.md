@@ -23,7 +23,8 @@ Some ideas I would like to look at in the future, kind of split based on what ki
 
 ## Minor developments
 * Create endpoint for Requirements files, allowing for versioning using Mix
-* Figure out something to automatically set last update date or version number
 * Set up linting / style enforcement
+* Replace text icons with proper icons
+* Look into JS size when compiled for production
 * Expand Readme
 	* Add Requirements

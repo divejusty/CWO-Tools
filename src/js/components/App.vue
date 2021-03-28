@@ -17,8 +17,8 @@
 
 		<Checklist :participants="participants" :requirement="selectedRequirement" />
 
-		<div class="copyright no-print center">
-			Laatst bijgewerkt op 24/01/2021. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
+		<div class="copyright no-print text-center">
+			Laatst bijgewerkt op {{ versionInfo }}. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
 		</div>
 	</div>
 </template>
@@ -28,6 +28,9 @@
 import Options from './Checklist/Options'
 import Settings from './Checklist/Settings'
 import Checklist from './Checklist/Checklist'
+
+// Import other dependencies
+import { DateTime } from 'luxon'
 
 export default {
 	components: {
@@ -40,6 +43,9 @@ export default {
 			participants: [],
 			requirements: [],
 			discipline: null,
+			version: {
+				date: '',
+			},
 		}
 	},
 	computed: {
@@ -52,6 +58,13 @@ export default {
 				return {}
 			}
 			return requirement
+		},
+		versionInfo()
+		{
+			// Create a Date object from the timestamp (after multiplying it by 1000, as PHP returns it in seconds)
+			let date = new DateTime(this.version.date * 1000)
+			return date.toLocaleString()
+
 		},
 	},
 	methods: {
@@ -102,9 +115,10 @@ export default {
 			this.discipline = null;
 		}
 	},
-	mounted() {
+	created() {
 		this.fetchAllRequirements()
-	}
+		this.version.date = window.appVersionDate
+	},
 }
 </script>
 

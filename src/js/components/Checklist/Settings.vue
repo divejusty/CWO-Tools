@@ -2,12 +2,12 @@
 	<div class="config no-print">
 		<Heading>instellingen</Heading>
 		<label>Discipline</label>
-		<select name="discipline" @change="$emit('change', $event.target.value)">
+		<BaseSelect name="discipline" @change="$emit('change', $event.target.value)" class="w-full">
 			<option :value="null" disabled :selected="discipline==null">---Discipline---</option>
 			<option v-for="requirement in requirements" :value="requirement.name" :key="requirement.name" :selected="discipline==requirement.name">
 				{{ requirement.name }}
 			</option>
-		</select>
+		</BaseSelect>
 
 		<Subheading>Deelnemers</Subheading>
 		<div>
@@ -19,16 +19,18 @@
 					{{ participant.level }}
 				</div>
 				<div class="participant__actions">
-					<IconButton class="delete" @click.native="$emit('delete-participant', participant.uuid)">
+					<IconButton class="float-right" @click.native="$emit('delete-participant', participant.uuid)" :danger="true">
 						x
 					</IconButton>
 				</div>
 			</div>
 		</div>
 
-		<input type="text" name="new-name" placeholder="naam" v-model="newName" @keyup.enter="addParticipant">
-		<input type="number" name="new-level" placeholder="cwo" min="1" max="4" v-model="newLevel">
-		<IconButton @click.native="addParticipant" :disabled="!submittable">+</IconButton>
+		<div class="flex flex-row">
+			<BaseInput name="new-name" placeholder="Naam" v-model="newName" @keyup.enter="addParticipant" />
+			<BaseInput inputType="number" name="new-level" placeholder="cwo" min="1" max="4" v-model="newLevel" />
+			<IconButton @click.native="addParticipant" :disabled="!submittable" class="flex-shrink-0">+</IconButton>
+		</div>
 	</div>
 </template>
 
@@ -58,7 +60,7 @@ export default {
 	}},
 	computed: {
 		submittable() {
-			return this.newName.length > 0 && this.newLevel >= 1 && this.newLevel <= 4 
+			return this.newName.length > 0 && this.newLevel >= 1 && this.newLevel <= 4 // TODO: Add UUID check 
 		},
 	},
 	methods: {
