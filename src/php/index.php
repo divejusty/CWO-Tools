@@ -24,7 +24,7 @@ include_once('Utils.php');
 		</script>
 	</head>
 
-	<body class="text-sm dark:text-gray-100 text-gray-900 dark:bg-gray-900 bg-gray-50">
+	<body class="text-md dark:text-gray-100 text-gray-900 dark:bg-gray-900 bg-gray-200 print:bg-transparent print:dark:bg-transparent">
 		<div id="app"></div>
 		<script src="<?php echo Utils::mix('assets/manifest.js') ?>"></script>
 		<script src="<?php echo Utils::mix('assets/vendor.js') ?>"></script>

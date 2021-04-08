@@ -1,7 +1,7 @@
 <template>
 	<div class="config no-print">
-		<Heading>instellingen</Heading>
-		<label>Discipline</label>
+		<Subheading>instellingen</Subheading>
+		<FormLabel>Discipline</FormLabel>
 		<BaseSelect name="discipline" @change="$emit('change', $event.target.value)" class="w-full">
 			<option :value="null" disabled :selected="discipline==null">---Discipline---</option>
 			<option v-for="requirement in requirements" :value="requirement.name" :key="requirement.name" :selected="discipline==requirement.name">
@@ -9,7 +9,7 @@
 			</option>
 		</BaseSelect>
 
-		<Subheading>Deelnemers</Subheading>
+		<FormLabel>Deelnemers</FormLabel>
 		<div>
 			<div class="participant" v-for="participant in participants" :key="participant.uuid">
 				<div class="participant__name">

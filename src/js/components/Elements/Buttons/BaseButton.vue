@@ -1,6 +1,12 @@
 <template>
 	<button @click="click"
-			class="rounded-md bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-1.5 h-8 cursor-pointer font-bold disabled:cursor-not-allowed m-1 border"
+			class="rounded-md 
+			bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700
+			text-gray-800 dark:text-gray-100 
+			p-1.5 h-8 m-1
+			cursor-pointer disabled:cursor-not-allowed
+			border border-gray-800 dark:border-gray-100
+			text-sm font-bold "
 			:class="classes">
 		<slot></slot>
 	</button>

@@ -7,17 +7,24 @@ In order to build the project run the following commands:
 npm install
 npm run production
 ```
-This will create a production ready environment in 'dist' 
+This will create a production ready environment in `./dist`.
 
 # Future Ideas
 Some ideas I would like to look at in the future, kind of split based on what kind of work it is, but in no particular order.
+I realise that most of this is extreme overkill for this project, but it also functions as a testing ground / learning experience.
 
 ## Major developments
 * Update/Extend requirement lists
 * Further incorporate Tailwind
-	* Also include light/dark mode support
+	* Replace more custom styling with tailwind
+	* See if common styles can be extracted by means of `@apply`
+	* Work on light-mode theme
 * More robust storage method
 * Lesson planner
+	* Move options to a menu
+	* Set up router
+	* Make PoC
+* Accomodation Planner?
 * Automatic testing
 	* Maybe integrate with GitHub Actions
 
@@ -28,3 +35,4 @@ Some ideas I would like to look at in the future, kind of split based on what ki
 * Look into JS size when compiled for production
 * Expand Readme
 	* Add Requirements
+	* Add Development instructions

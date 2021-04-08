@@ -15,8 +15,13 @@ module.exports = {
 		white: colors.white,
 		gray: colors.blueGray,
 		red: colors.red,
+		blue: colors.blue,
 	  },
-    extend: {},
+    extend: {
+		screens: {
+			'print': {'raw': 'print'},
+		}
+	},
   },
   variants: {
     extend: {

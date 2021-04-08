@@ -1,24 +1,24 @@
 <template>
 	<div class="app">
-		<Settings :participants=participants :requirements=requirements :discipline=discipline
+		<Settings :participants=participants :requirements=requirements :discipline=discipline class="p-3 border-r"
 		@change="discipline = $event"
 		@delete-participant="deleteParticipant" />
 
-		<div class="info no-print">
+		<div class="info no-print p-3 border-r">
 			<Subheading>Uitleg</Subheading>
-			<ol class="list">
+			<ol class="list-decimal ml-3">
 				<li>Selecteer een discipline</li>
 				<li>Vul deelnemers in (naam en welk diploma)</li>
 				<li>Druk de lijst af (zorg dat achtergrondkleuren aan staan!)</li>
 			</ol>
 		</div>
 
-		<Options @do-reset="doReset()" @do-print="doPrint()" />
+		<Options @do-reset="doReset()" @do-print="doPrint()" class="p-3 border-r" />
 
 		<Checklist :participants="participants" :requirement="selectedRequirement" />
 
-		<div class="copyright no-print text-center">
-			Laatst bijgewerkt op {{ versionInfo }}. De source is beschikbaar op <a href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</a>.
+		<div class="copyright no-print text-center p-3 border-t">
+			Laatst bijgewerkt op {{ versionInfo }}. De source is beschikbaar op <Link href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</Link>.
 		</div>
 	</div>
 </template>
@@ -150,24 +150,13 @@ export default {
 	}
 }
 
-.config, .checklist, .info, .options {
-	padding: $padding;
-	box-sizing: border-box;
-}
-
-.config, .info, .options {
-	border-right: 1px solid $colour-foreground;
-}
-
 .config { grid-area: config; }
 .checklist { grid-area: checklist; }
 .options { grid-area: options; }
 .info { grid-area: info; }
 
 .copyright {
-	border-top: 1px solid $colour-foreground;
 	grid-area: copyright;
-	padding: $padding;
 }
 
 @media print {
