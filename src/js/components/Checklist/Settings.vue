@@ -11,15 +11,15 @@
 
 		<FormLabel>Deelnemers</FormLabel>
 		<div>
-			<div class="participant" v-for="participant in participants" :key="participant.uuid">
-				<div class="participant__name">
+			<div class="flex flex-row w-full m-1 items-center" v-for="participant in participants" :key="participant.uuid">
+				<div class="flex-grow">
 					{{ participant.name }}
 				</div>
-				<div class="participant__level">
+				<div class="flex-grow-0 pl-1">
 					{{ participant.level }}
 				</div>
-				<div class="participant__actions">
-					<IconButton class="float-right" @click.native="$emit('delete-participant', participant.uuid)" :danger="true">
+				<div class="flex-grow-0 pl-1">
+					<IconButton class="" @click.native="$emit('delete-participant', participant.uuid)" :danger="true">
 						x
 					</IconButton>
 				</div>
@@ -81,22 +81,3 @@ export default {
 	},
 }
 </script>
-
-<style lang="scss" scoped>
-.participant {
-	display: flex;
-	width: 100%;
-	place-content: start space-evenly;
-	align-items: center;
-	margin: 5px;
-
-	&__name {
-		flex-grow: 1;
-	}
-
-	&__level, &__actions {
-		flex-grow: 0;
-		padding-left: 5px;
-	}
-}
-</style>

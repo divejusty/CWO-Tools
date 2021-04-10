@@ -1,5 +1,5 @@
 <template>
-	<div class="app">
+	<div class="app w-screen h-screen">
 		<Settings :participants=participants :requirements=requirements :discipline=discipline class="p-3 border-r"
 		@change="discipline = $event"
 		@delete-participant="deleteParticipant" />
@@ -124,9 +124,6 @@ export default {
 
 <style lang="scss">
 .app {
-	width: 100vw;
-	height: 100vh;
-
 	display: grid;
 	grid-template-areas:
 		"config checklist"
@@ -134,7 +131,7 @@ export default {
 		"options checklist"
 		"copyright copyright";
 	grid-template-columns: 300px 1fr;
-	grid-template-rows: 2fr 1fr 1fr $grid-copyright-height;
+	grid-template-rows: 2fr 1fr 1fr 38px;
 }
 
 @media screen and (max-width: 750px) {
@@ -146,7 +143,7 @@ export default {
 			"checklist"
 			"copyright";
 		grid-template-columns: auto;
-		grid-template-rows: auto auto auto auto $grid-copyright-height; 
+		grid-template-rows: auto auto auto auto 38px; 
 	}
 }
 

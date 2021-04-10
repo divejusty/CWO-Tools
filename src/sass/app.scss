@@ -1,6 +1,9 @@
-@import "variables";
-
-@import "general";
-
 @import "utilities";
 
+@layer components {
+	.border-default {
+		@apply 
+			border border-gray-800 dark:border-gray-100
+		;
+	}
+}

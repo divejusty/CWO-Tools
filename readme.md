@@ -16,12 +16,12 @@ I realise that most of this is extreme overkill for this project, but it also fu
 ## Major developments
 * Update/Extend requirement lists
 * Further incorporate Tailwind
-	* Replace more custom styling with tailwind
-	* See if common styles can be extracted by means of `@apply`
+	* Extract more common styles by means of `@apply`
 	* Work on light-mode theme
 * More robust storage method
 * Lesson planner
 	* Move options to a menu
+	* Extract requirements app into separate component and create template
 	* Set up router
 	* Make PoC
 * Accomodation Planner?

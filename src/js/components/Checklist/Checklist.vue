@@ -1,11 +1,10 @@
 <template>
-	<div class="checklist overflow-y-scroll overflow-x-hidden">
-		<Heading class="checklist__title no-print">Checklist</Heading>
-		<table class="table">
+	<div class="checklist overflow-y-scroll overflow-x-hidden mx-2 mb-2">
+		<table class="border-collapse text-sm">
 			<thead>
 			<tr v-if="participants.length > 0">
-				<td class="table__label"></td>
-				<td class="table__label" v-for="(participant, key) in participants" :key="key">
+				<td class=""></td>
+				<td class="capitalize" v-for="(participant, key) in participants" :key="key">
 					{{ participant.name }} ({{ participant.level }})
 				</td>
 			</tr>
@@ -13,8 +12,8 @@
 
 			<tbody>
 				<tr v-for="(task, key) in requirement.requirements" :key="key" :class="(maxLevel < task.diploma) ? 'no-print' : ''">
-					<td class="table__label">{{ task.name }}</td>
-					<td :class="'table__cell table__cell--' + (task.diploma > participant.level ? 'noreq' : 'req')"
+					<td class="capitalize">{{ task.name }}</td>
+					<td :class="'requirement' + (task.diploma > participant.level ? ' not-required' : '')"
 						v-for="(participant, key) in participants" :key="key">&nbsp;</td>
 				</tr>
 			</tbody>
@@ -49,54 +48,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.table {
-	border-collapse: collapse;
-	font-size: $font-size;
-
+// Apply Tailwind classes like this such that they don't have to be repeated over every table element.
+@layer components {
 	td {
-		border: 1px solid $colour-border;
-		padding: 5px 8px;
+		@apply
+			py-1 px-2
+			text-center print:text-black
+			border dark:border-gray-100 print:dark:border-black
+			dark:bg-gray-800 print:dark:bg-gray-300
+		;
 		min-width: 70px;
 
-		text-align: center;
-	}
-
-	&__label {
-		color: $colour-foreground;
-		background: $colour-box;
-		text-transform: capitalize;
-	}
-
-	&__cell {
-		&--req {
-			background: $colour-foreground;
+		&.requirement {
+			@apply 
+				dark:bg-gray-600 print:dark:bg-transparent
+			;
 		}
 
-		&--noreq {
-			background-image: url("../../../images/unavailable.gif");
-		}
-	}
-}
-
-@media print {
-	.table {
-		td {
-			border-color: $colour-border-print;
-		}
-
-		&__label {
-			color: $colour-foreground-print;
-			background: $colour-box-print;
-		}
-
-		&__cell {
-			&--req {
-				background: $colour-background-print;
-			}
-
-			&--noreq {
-				background-image: url("../../../images/unavailable.gif");
-			}
+		&.not-required {
+			background-image: url("../../../images/unavailable.gif");	
 		}
 	}
 }

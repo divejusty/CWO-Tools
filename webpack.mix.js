@@ -4,7 +4,6 @@ mix
 	.setPublicPath('dist/')
 	.vue({
 		extractStyles: true,
-		globalStyles: './src/sass/_variables.scss',
 	})
 
 	.copyDirectory('src/reqs', 'dist/assets/reqs')

@@ -1,6 +1,6 @@
 <template>
 	<input :type="inputType" v-on="inputListeners" v-bind="$attrs" 
-			class="h-8  bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 border p-1.5 rounded-md m-1">
+			class="h-8  bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 border-default p-1.5 rounded-md m-1">
 </template>
 
 <script>

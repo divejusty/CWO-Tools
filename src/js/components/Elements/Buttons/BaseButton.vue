@@ -5,7 +5,7 @@
 			text-gray-800 dark:text-gray-100 
 			p-1.5 h-8 m-1
 			cursor-pointer disabled:cursor-not-allowed
-			border border-gray-800 dark:border-gray-100
+			border-default
 			text-sm font-bold "
 			:class="classes">
 		<slot></slot>
