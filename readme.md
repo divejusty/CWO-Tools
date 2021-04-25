@@ -18,6 +18,7 @@ I realise that most of this is extreme overkill for this project, but it also fu
 * Further incorporate Tailwind
 	* Extract more common styles by means of `@apply`
 	* Work on light-mode theme
+	* Build proper responsive design
 * More robust storage method
 * Lesson planner
 	* Move options to a menu

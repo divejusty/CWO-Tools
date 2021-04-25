@@ -4,7 +4,7 @@
 		<FormLabel>Discipline</FormLabel>
 		<BaseSelect name="discipline" @change="$emit('change', $event.target.value)" class="w-full">
 			<option :value="null" disabled :selected="discipline==null">---Discipline---</option>
-			<option v-for="requirement in requirements" :value="requirement.name" :key="requirement.name" :selected="discipline==requirement.name">
+			<option v-for="requirement in sortedRequirements" :value="requirement.name" :key="requirement.name" :selected="discipline==requirement.name">
 				{{ requirement.name }}
 			</option>
 		</BaseSelect>
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import { v4 as uuidv4 } from 'uuid'
+
 export default {
 	props: {
 		participants: {
@@ -59,8 +61,11 @@ export default {
 		newLevel: 1,
 	}},
 	computed: {
+		sortedRequirements() {
+			return this.requirements.sort()
+		},
 		submittable() {
-			return this.newName.length > 0 && this.newLevel >= 1 && this.newLevel <= 4 // TODO: Add UUID check 
+			return this.newName.length > 0 && this.newLevel >= 1 && this.newLevel <= 4
 		},
 	},
 	methods: {
@@ -70,7 +75,7 @@ export default {
 			}
 
 			this.participants.push({
-				uuid: this.newName + '-' + this.newLevel,
+				uuid: uuidv4(),
 				name: this.newName,
 				level: this.newLevel,
 			})

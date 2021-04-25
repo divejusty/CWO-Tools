@@ -1,9 +1,9 @@
 <template>
-	<div class="checklist overflow-y-scroll overflow-x-hidden mx-2 mb-2">
+	<div class="checklist overflow-y-scroll overflow-x-hidden m-2">
 		<table class="border-collapse text-sm">
 			<thead>
 			<tr v-if="participants.length > 0">
-				<td class=""></td>
+				<td class="">{{ requirement.name }}</td>
 				<td class="capitalize" v-for="(participant, key) in participants" :key="key">
 					{{ participant.name }} ({{ participant.level }})
 				</td>
