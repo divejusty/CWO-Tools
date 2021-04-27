@@ -8,7 +8,7 @@
 			<MenuItem @click="doPrint">
 				Afdrukken
 			</MenuItem>
-			<MenuItem @click="doReset">
+			<MenuItem @click="doReset" :danger="true">
 				Reset alles
 			</MenuItem>
 		</template>

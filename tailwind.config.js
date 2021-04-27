@@ -26,6 +26,7 @@ module.exports = {
   variants: {
     extend: {
 		cursor: ['disabled'],
+		borderRadius: ['first', 'last'],
 	},
   },
   plugins: [],

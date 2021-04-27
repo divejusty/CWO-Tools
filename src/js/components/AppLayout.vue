@@ -60,7 +60,7 @@ export default {
 	grid-template-rows: auto 38px; // TODO convert to rem
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) { // TODO convert to proper breakpoints
 	.app {
 		grid-template-areas:
 			"sidebar"
