@@ -1,10 +1,9 @@
 <template>
 	<button @click="click"
 			class="rounded-md 
-			bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700
 			text-gray-800 dark:text-gray-100 
 			p-1.5 h-8 m-1
-			cursor-pointer disabled:cursor-not-allowed
+			interactable
 			border-default
 			text-sm font-bold "
 			:class="classes">

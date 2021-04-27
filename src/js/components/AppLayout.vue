@@ -1,6 +1,13 @@
 <template>
 	<div class="app w-screen h-screen">
-		<div class="sidebar border-r p-3 flex flex-col justify-between">
+		<div class="sidebar border-r p-3 pt-0 flex flex-col justify-between">
+			<AppMenu>
+				<slot name="title">App</slot>
+				<template slot="menuItems">
+					<slot name="menu"></slot>
+				</template>
+			</AppMenu>
+		
 			<slot name="sidebar"></slot>
 		</div>
 		<slot class="main"></slot>
@@ -12,10 +19,16 @@
 </template>
 
 <script>
+// Import components
+import AppMenu from './AppMenu'
+
 // Import other dependencies
 import { DateTime } from 'luxon'
 
 export default {
+	components: {
+		AppMenu,
+	},
 	data () {
 		return {
 			version: {

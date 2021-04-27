@@ -1,5 +1,18 @@
 <template>
 	<AppLayout>
+		<template slot="title">
+			Checklist Generator
+		</template>
+
+		<template slot="menu">
+			<MenuItem @click="doPrint">
+				Afdrukken
+			</MenuItem>
+			<MenuItem @click="doReset">
+				Reset alles
+			</MenuItem>
+		</template>
+
 		<template slot="sidebar">
 			<Settings :participants=participants :requirements=requirements :discipline=discipline class="flex-grow"
 			@change="discipline = $event"
@@ -13,8 +26,6 @@
 					<li>Druk de lijst af (zorg dat achtergrondkleuren aan staan!)</li>
 				</ol>
 			</div>
-
-			<Options @do-reset="doReset()" @do-print="doPrint()" class="flex-grow-0" />
 		</template>
 
 		<template>
@@ -26,16 +37,11 @@
 <script>
 // Import components
 import AppLayout from '../AppLayout'
-import Options from './Options'
 import Settings from './Settings'
 import Checklist from './Checklist'
 
-// Import other dependencies
-import { DateTime } from 'luxon'
-
 export default {
 	components: {
-		Options,
 		Settings,
 		Checklist,
 		AppLayout,
