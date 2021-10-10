@@ -5,7 +5,7 @@ include_once('Utils.php');
 
 <html lang="nl">
 	<head>
-		<title>CWO checklist generator</title>
+		<title>CWO Checklist Generator</title>
 		<link href="<?php echo Utils::mix('assets/app.css') ?>" rel="stylesheet">
 		<link href="<?php echo Utils::mix('assets/vendor.css') ?>" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">

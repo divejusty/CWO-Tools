@@ -54,14 +54,17 @@ export default {
 		@apply
 			py-1 px-2
 			text-center print:text-black
-			border dark:border-gray-100 print:dark:border-black
-			dark:bg-gray-800 print:dark:bg-gray-300
+			border border-gray-800 dark:border-gray-100
+			print:border-black print:dark:border-black
+			dark:bg-gray-800 bg-gray-300
+			print:bg-gray-300 print:dark:bg-gray-300
 		;
 		min-width: 70px;
 
 		&.requirement {
 			@apply 
 				dark:bg-gray-600 print:dark:bg-transparent
+				bg-white print:bg-transparent
 			;
 		}
 

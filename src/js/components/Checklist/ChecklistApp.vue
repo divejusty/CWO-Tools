@@ -1,10 +1,21 @@
 <template>
 	<AppLayout>
+		<InfoDialog :shown="infoDialog.shown" @dialog-close="infoDialog.callback">
+			<Subheading>Uitleg</Subheading>
+			<ol class="list-decimal ml-5">
+				<li>Selecteer een discipline</li>
+				<li>Vul deelnemers in (naam en welk diploma)</li>
+				<li>Druk de lijst af (zorg dat achtergrondkleuren aan staan!)</li>
+			</ol>
+		</InfoDialog>
+		<QuestionDialog :shown="questionDialog.shown" @dialog-close="questionDialog.callback(answer)">{{ questionDialog.message }}</QuestionDialog>
+
 		<template slot="title">
 			Checklist Generator
 		</template>
 
 		<template slot="menu">
+			<MenuItem @click="showExplanation">Uitleg</MenuItem>
 			<MenuItem @click="doPrint">
 				Afdrukken
 			</MenuItem>
@@ -17,15 +28,6 @@
 			<Settings :participants=participants :requirements=requirements :discipline=discipline class="flex-grow"
 			@change="discipline = $event"
 			@delete-participant="deleteParticipant" />
-
-			<div class="info no-print flex-grow-0">
-				<Subheading>Uitleg</Subheading>
-				<ol class="list-decimal ml-3">
-					<li>Selecteer een discipline</li>
-					<li>Vul deelnemers in (naam en welk diploma)</li>
-					<li>Druk de lijst af (zorg dat achtergrondkleuren aan staan!)</li>
-				</ol>
-			</div>
 		</template>
 
 		<template>
@@ -54,6 +56,17 @@ export default {
 			discipline: null,
 			version: {
 				date: '',
+			},
+			infoDialog: {
+				shown: false,
+				callback: this.closeDialogs
+			},
+			questionDialog: {
+				shown: false,
+				message: '',
+				callback(answer) {
+					console.log(answer)
+				}
 			},
 		}
 	},
@@ -118,10 +131,16 @@ export default {
 				alert('Er is nog niet genoeg informatie om te printen')
 			}
 		},
-
 		doReset() {
 			this.participants = []
 			this.discipline = null;
+		},
+		showExplanation() {
+			this.infoDialog.shown = true
+		},
+		closeDialogs() {
+			this.infoDialog.shown = false
+			this.questionDialog.shown = false
 		}
 	},
 	created() {

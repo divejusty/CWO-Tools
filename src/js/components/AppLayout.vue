@@ -1,6 +1,6 @@
 <template>
 	<div class="app w-screen h-screen">
-		<div class="sidebar border-r p-3 pt-0 flex flex-col justify-between">
+		<div class="sidebar border-r border-gray-800 dark:border-gray-100 p-3 pt-0 flex flex-col justify-between">
 			<AppMenu>
 				<slot name="title">App</slot>
 				<template slot="menuItems">
@@ -12,7 +12,7 @@
 		</div>
 		<slot class="main"></slot>
 
-		<div class="copyright no-print text-center p-3 border-t">
+		<div class="copyright no-print text-center p-3 border-t border-gray-800 dark:border-gray-100">
 			Laatst bijgewerkt op {{ versionInfo }}. De source is beschikbaar op <Link href="https://github.com/divejusty/CWO-Tools" target="_blank">GitHub</Link>.
 		</div>
 	</div>

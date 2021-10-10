@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full flex">
+	<div class="w-full flex no-print">
 		<div v-closable="closeMenu">
 			<IconButton @click="menuExpanded =! menuExpanded">
 				=
@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import { toggleThemeMode } from '../utils'
+
 export default {
 	data () {
 		return {
@@ -29,14 +31,8 @@ export default {
 		}
 	},
 	methods: {
-		toggleTheme() { // TODO: Extract this?
-			if(localStorage.theme === null || localStorage.theme === 'dark') {
-				localStorage.theme = 'light'
-				document.documentElement.classList.remove('dark')
-			} else {
-				localStorage.theme = 'dark'
-				document.documentElement.classList.add('dark')
-			}
+		toggleTheme() {
+			toggleThemeMode()
 		},
 		closeMenu() {
 			// Only close the menu when it's actually open
